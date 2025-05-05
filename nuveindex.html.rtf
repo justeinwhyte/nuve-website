@@ -1,0 +1,308 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28600\viewh15360\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+  <title>Nuve | Modern Living Redefined</title>\
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">\
+  <style>\
+    * \{\
+      box-sizing: border-box;\
+      margin: 0;\
+      padding: 0;\
+      font-family: 'Inter', sans-serif;\
+    \}\
+    body \{\
+      background-color: #f7f7f7;\
+      color: #111;\
+      line-height: 1.6;\
+    \}\
+    header \{\
+      background-color: #ffffff;\
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);\
+      padding: 1rem 2rem;\
+      display: flex;\
+      justify-content: space-between;\
+      align-items: center;\
+      position: sticky;\
+      top: 0;\
+      z-index: 999;\
+    \}\
+    .logo \{\
+      font-size: 1.5rem;\
+      font-weight: 800;\
+      color: #000;\
+    \}\
+    nav a \{\
+      margin-left: 1.5rem;\
+      text-decoration: none;\
+      color: #555;\
+      font-weight: 600;\
+    \}\
+    nav a:hover \{\
+      color: #000;\
+    \}\
+    .hero \{\
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;\
+      height: 80vh;\
+      display: flex;\
+      align-items: center;\
+      justify-content: center;\
+      color: white;\
+      text-align: center;\
+      padding: 0 2rem;\
+    \}\
+    .hero h1 \{\
+      font-size: 3rem;\
+      background: rgba(0, 0, 0, 0.5);\
+      padding: 1rem 2rem;\
+      border-radius: 0.5rem;\
+    \}\
+    .section \{\
+      padding: 4rem 2rem;\
+      max-width: 1200px;\
+      margin: auto;\
+    \}\
+    .section h2 \{\
+      text-align: center;\
+      margin-bottom: 2rem;\
+      font-size: 2rem;\
+    \}\
+    .products \{\
+      display: grid;\
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\
+      gap: 2rem;\
+    \}\
+    .product-card \{\
+      background: white;\
+      padding: 1rem;\
+      border-radius: 1rem;\
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);\
+      transition: transform 0.3s;\
+    \}\
+    .product-card:hover \{\
+      transform: translateY(-5px);\
+    \}\
+    .product-card img \{\
+      width: 100%;\
+      border-radius: 0.5rem;\
+    \}\
+    .product-card h3 \{\
+      margin-top: 1rem;\
+      font-size: 1.25rem;\
+    \}\
+    .cta \{\
+      background: #111;\
+      color: white;\
+      text-align: center;\
+      padding: 4rem 2rem;\
+    \}\
+    .cta h2 \{\
+      margin-bottom: 1rem;\
+      font-size: 2rem;\
+    \}\
+    .cta a \{\
+      display: inline-block;\
+      margin-top: 1rem;\
+      background: white;\
+      color: #111;\
+      padding: 0.75rem 2rem;\
+      border-radius: 999px;\
+      text-decoration: none;\
+      font-weight: 600;\
+    \}\
+    .about \{\
+      background: #fff;\
+      padding: 4rem 2rem;\
+      text-align: center;\
+    \}\
+    .about h2 \{\
+      font-size: 2rem;\
+      margin-bottom: 1.5rem;\
+    \}\
+    .about p \{\
+      font-size: 1rem;\
+      color: #444;\
+      max-width: 800px;\
+      margin: 0 auto;\
+      line-height: 1.8;\
+    \}\
+    footer \{\
+      text-align: center;\
+      padding: 2rem;\
+      background: #fff;\
+      color: #aaa;\
+      font-size: 0.9rem;\
+    \}\
+    .filter-section \{\
+      text-align: center;\
+      margin-bottom: 2rem;\
+    \}\
+    .filter-section select \{\
+      padding: 0.5rem;\
+      border-radius: 0.5rem;\
+    \}\
+    .search-bar \{\
+      text-align: center;\
+      margin-bottom: 2rem;\
+    \}\
+    .search-bar input \{\
+      padding: 0.75rem;\
+      width: 50%;\
+      border-radius: 0.5rem;\
+      border: 1px solid #ddd;\
+    \}\
+    .product-popup \{\
+      display: none;\
+      position: fixed;\
+      top: 50%;\
+      left: 50%;\
+      transform: translate(-50%, -50%);\
+      background: white;\
+      padding: 2rem;\
+      border-radius: 1rem;\
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);\
+      z-index: 1000;\
+    \}\
+    .product-popup img \{\
+      max-width: 100%;\
+      border-radius: 0.5rem;\
+    \}\
+    .popup-close \{\
+      background: #ff0000;\
+      color: white;\
+      border: none;\
+      padding: 0.5rem;\
+      border-radius: 50%;\
+      font-size: 1.25rem;\
+      cursor: pointer;\
+      position: absolute;\
+      top: 1rem;\
+      right: 1rem;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <header>\
+    <div class="logo">Nuve</div>\
+    <nav>\
+      <a href="#products">Products</a>\
+      <a href="#about">About</a>\
+      <a href="#contact">Contact</a>\
+    </nav>\
+  </header>\
+\
+  <section class="hero">\
+    <h1>Design That Fits Your Life \'97 From Dorms to Dream Homes</h1>\
+  </section>\
+\
+  <!-- Product Search Bar -->\
+  <section class="search-bar">\
+    <input type="text" id="search-input" placeholder="Search for products..." />\
+  </section>\
+\
+  <!-- Product Categories Section -->\
+  <section class="section" id="products">\
+    <h2>Shop by Room</h2>\
+    <div class="filter-section">\
+      <label for="room-filter" style="font-weight: 600;">Filter by Room:</label>\
+      <select id="room-filter">\
+        <option value="livingroom">Living Room</option>\
+        <option value="bedroom">Bedroom</option>\
+        <option value="kitchen">Kitchen</option>\
+        <option value="patio">Patio</option>\
+      </select>\
+    </div>\
+\
+    <div class="products" id="livingroom">\
+      <div class="product-card" onclick="openProductPopup('CloudNova Sofa', 'https://images.unsplash.com/photo-1598300052651-16788b0c84a2', 'A modern sofa with a minimalist design.')">\
+        <img src="https://images.unsplash.com/photo-1598300052651-16788b0c84a2" alt="Sofa">\
+        <h3>CloudNova Sofa</h3>\
+      </div>\
+      <div class="product-card" onclick="openProductPopup('GlassNest Coffee Table', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7', 'A sleek glass coffee table that fits any living room style.')">\
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Coffee Table">\
+        <h3>GlassNest Coffee Table</h3>\
+      </div>\
+    </div>\
+\
+    <div class="products" id="bedroom">\
+      <div class="product-card" onclick="openProductPopup('PureRest Bed Frame', 'https://images.unsplash.com/photo-1606752504741-ddecd0197f7f', 'A minimalist bed frame for a relaxing bedroom ambiance.')">\
+        <img src="https://images.unsplash.com/photo-1606752504741-ddecd0197f7f" alt="Bed">\
+        <h3>PureRest Bed Frame</h3>\
+      </div>\
+      <div class="product-card" onclick="openProductPopup('Luna Nightstand', 'https://images.unsplash.com/photo-1613062744156-c689a15cc9fa', 'A simple yet elegant nightstand to complete your bedroom.')">\
+        <img src="https://images.unsplash.com/photo-1613062744156-c689a15cc9fa" alt="Nightstand">\
+        <h3>Luna Nightstand</h3>\
+      </div>\
+    </div>\
+\
+    <!-- Add sections for Kitchen and Patio -->\
+  </section>\
+\
+  <!-- Product Popup -->\
+  <div id="product-popup" class="product-popup">\
+    <button class="popup-close" onclick="closeProductPopup()">X</button>\
+    <img id="popup-image" src="" alt="Product Image" />\
+    <h3 id="popup-title"></h3>\
+    <p id="popup-description"></p>\
+  </div>\
+\
+  <section class="about" id="about">\
+    <h2>About Nuve</h2>\
+    <p>\
+      At Nuve, we believe in creating spaces that inspire modern living through elegance and intelligent design.\
+      Our team of designers and engineers work together to develop furnishings and appliances that blend seamlessly\
+      into your life, offering both beauty and smart functionality.\
+    </p>\
+  </section>\
+\
+  <section class="cta">\
+    <h2>Ready to Redefine Your Home?</h2>\
+    <p>Sign up to get exclusive product releases and design inspiration.</p>\
+    <a href="#signup">Join the Nuve Community</a>\
+  </section>\
+\
+  <footer>\
+    &copy; 2025 Nuve. All rights reserved.\
+  </footer>\
+\
+  <script>\
+    // JavaScript for Aesthetic Filter\
+    document.getElementById('room-filter').addEventListener('change', function(e) \{\
+      const room = e.target.value;\
+      document.querySelectorAll('.products').forEach(section => \{\
+        section.style.display = section.id === room ? 'grid' : 'none';\
+      \});\
+    \});\
+\
+    // JavaScript for Product Search\
+    document.getElementById('search-input').addEventListener('input', function(e) \{\
+      const query = e.target.value.toLowerCase();\
+      document.querySelectorAll('.product-card').forEach(card => \{\
+        const title = card.querySelector('h3').textContent.toLowerCase();\
+        card.style.display = title.includes(query) ? 'block' : 'none';\
+      \});\
+    \});\
+\
+    // JavaScript for Product Popup\
+    function openProductPopup(title, imgSrc, description) \{\
+      document.getElementById('popup-title').textContent = title;\
+      document.getElementById('popup-image').src = imgSrc;\
+      document.getElementById('popup-description').textContent = description;\
+      document.getElementById('product-popup').style.display = 'block';\
+    \}\
+\
+    function closeProductPopup() \{\
+      document.getElementById('product-popup').style.display = 'none';\
+    \}\
+  </script>\
+</body>\
+</html>\
+}
